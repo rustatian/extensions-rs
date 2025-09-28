@@ -1,0 +1,26 @@
+[package]
+name = "extensions-rs"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+resolver = "3"
+members = ["crates/extension_host", "crates/extension_api", "crates/semantic_version"]
+
+[workspace.dependencies]
+wasmtime = { version = "37", default-features = false, features = [
+    "async",
+    "demangle",
+    "runtime",
+    "cranelift",
+    "component-model",
+    "incremental-cache",
+    "parallel-compilation",
+] }
+wasmtime-wasi = "37"
+wit-component = "0.239"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
