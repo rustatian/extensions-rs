@@ -2,10 +2,15 @@
 name = "extensions-rs"
 version = "0.1.0"
 edition = "2024"
+authors = ["Valery Piashchynski"]
 
 [workspace]
 resolver = "3"
-members = ["crates/extension_host", "crates/extension_api", "crates/semantic_version"]
+members = [
+    "crates/extension_host",
+    "crates/extension_api",
+    "crates/semantic_version",
+]
 
 [workspace.dependencies]
 wasmtime = { version = "37", default-features = false, features = [
