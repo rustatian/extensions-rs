@@ -13,7 +13,7 @@ members = [
 ]
 
 [workspace.dependencies]
-wasmtime = { version = "37", default-features = false, features = [
+wasmtime = { version = "38", default-features = false, features = [
     "async",
     "demangle",
     "runtime",
